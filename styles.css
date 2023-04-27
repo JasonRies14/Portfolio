@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: transparent;
+}
+
 html {
     font-size: 10px;
 }
@@ -22,25 +26,68 @@ body {
 .h1 {
     text-align: center;
     font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: ;
 }
 
-.div2 {
+.div2, .div3, .div4 {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
 .p1 {
+    width: 95%;
+    max-width: 65ch;
+    font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 0.6em;
+    padding: 0.5em;
+    margin: 1%;
+    backdrop-filter: blur(2px) brightness(200%);
+    color: snow;
+    font-family: Arial;
+    text-shadow: 1px 1px 10px black;
+}
+
+mark {
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+    text-shadow: 1px 1px 10px snow;
+    border: 2px dotted snow;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 15px;
+    padding: 0.1em;
+}
+
+mark::selection {
+    color: black;
+}
+
+.div5 {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
     max-width: 65ch;
     font-size: 2rem;
     border: 1px solid black;
     border-radius: 0.6em;
     padding: 0.5em;
     margin: 1%;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px) brightness(150%);
+    color: snow;
+    font-family: Arial;
+    text-shadow: 1px 1px 10px black;
 }
 
-mark {
-    background-color: grey;
-    border-radius: 10%;
+table {
+    border: 1px solid black;
+    font-size: 1.5rem;
+
+}
+
+tr, th, td {
+    border: 1px solid black;
 }
