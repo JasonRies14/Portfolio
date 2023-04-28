@@ -1,10 +1,15 @@
 * {
-    
     box-sizing: border-box;
+    color: snow;
+    font-family: Arial;
+    text-shadow: 1px 1px 10px black;
 }
 
 *::selection {
-    background-color: transparent;
+    background-color: rgba(14, 138, 196, 0.5);
+    text-shadow: 1px 1px 5px snow;
+    color: black;
+    font-weight: bold;
 }
 
 html {
@@ -26,8 +31,9 @@ body {
 .h1 {
     text-align: center;
     font-size: 2.5rem;
-    border: 1px solid black;
-    border-radius: ;
+    border-radius: 10px;
+    padding: 0.2em;
+    backdrop-filter: blur(2px) brightness(70%);
 }
 
 .div2, .div3, .div4 {
@@ -40,14 +46,20 @@ body {
     width: 95%;
     max-width: 65ch;
     font-size: 2.5rem;
-    border: 1px solid black;
     border-radius: 0.6em;
     padding: 0.5em;
     margin: 1%;
-    backdrop-filter: blur(2px) brightness(200%);
+    backdrop-filter: blur(2px) brightness(70%);
     color: snow;
     font-family: Arial;
     text-shadow: 1px 1px 10px black;
+
+}
+
+p::selection {
+    text-shadow: 1px 1px 5px snow;
+    color: black;
+    font-weight: bold;
 }
 
 mark {
@@ -68,26 +80,43 @@ mark::selection {
 
 .div5 {
     width: 95%;
+    min-width: 25rems;
     display: flex;
     flex-direction: column;
     max-width: 65ch;
     font-size: 2rem;
-    border: 1px solid black;
     border-radius: 0.6em;
     padding: 0.5em;
     margin: 1%;
-    backdrop-filter: blur(2px) brightness(150%);
+    backdrop-filter: blur(2px);
     color: snow;
     font-family: Arial;
     text-shadow: 1px 1px 10px black;
+    backdrop-filter: blur(2px) brightness(60%);
 }
 
 table {
-    border: 1px solid black;
     font-size: 1.5rem;
+    padding: 0.2em;
+}
 
+@media screen and (max-width:255px) {
+    table {
+        font-size: 1.1rem;
+        padding: 0.1rem;
+    }
+
+    ul {
+        margin-left: -1.7rem;
+    }
+    
 }
 
 tr, th, td {
-    border: 1px solid black;
+    max-width: 65ch;
+    width: 50%;
+}
+
+.td1, .td2 {
+    text-align: start;
 }
